@@ -9,22 +9,26 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `wp_term_relationships`;
+DROP TABLE IF EXISTS `wp_eg_grids`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `wp_term_relationships` (
-  `object_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `term_taxonomy_id` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `term_order` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`object_id`,`term_taxonomy_id`),
-  KEY `term_taxonomy_id` (`term_taxonomy_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `wp_eg_grids` (
+  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `handle` varchar(255) NOT NULL,
+  `postparams` text NOT NULL,
+  `params` text NOT NULL,
+  `layers` mediumtext NOT NULL,
+  `settings` text,
+  `last_modified` datetime DEFAULT NULL,
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `handle` (`handle`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-LOCK TABLES `wp_term_relationships` WRITE;
-/*!40000 ALTER TABLE `wp_term_relationships` DISABLE KEYS */;
-INSERT INTO `wp_term_relationships` VALUES (1,1,0),(18883,2,0),(18885,2,0),(18888,2,0),(18891,2,0),(18894,2,0),(18897,2,0),(18900,2,0),(18962,3,0),(18963,3,0),(18964,3,0),(18973,3,0),(18976,3,0),(18979,3,0),(18982,3,0),(18985,3,0),(18989,4,0),(18989,8,0);
-/*!40000 ALTER TABLE `wp_term_relationships` ENABLE KEYS */;
+LOCK TABLES `wp_eg_grids` WRITE;
+/*!40000 ALTER TABLE `wp_eg_grids` DISABLE KEYS */;
+/*!40000 ALTER TABLE `wp_eg_grids` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

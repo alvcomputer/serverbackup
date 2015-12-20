@@ -34,12 +34,12 @@ CREATE TABLE `wp_comments` (
   KEY `comment_date_gmt` (`comment_date_gmt`),
   KEY `comment_parent` (`comment_parent`),
   KEY `comment_author_email` (`comment_author_email`(10))
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `wp_comments` WRITE;
 /*!40000 ALTER TABLE `wp_comments` DISABLE KEYS */;
-INSERT INTO `wp_comments` VALUES (1,1,'Sr WordPress','','https://wordpress.org/','','2015-12-20 15:31:18','2015-12-20 15:31:18','Hola, esto es un comentario.\nPara borrar un comentario simplemente accede y revisa los comentarios de la entrada. Ahí tendrás la opción de editarlo o borrarlo.',0,'1','','',0,0);
+INSERT INTO `wp_comments` VALUES (1,1,'Mr WordPress','','https://wordpress.org/','','2015-07-30 12:43:16','2015-07-30 12:43:16','Hi, this is a comment.\nTo delete a comment, just log in and view the post&#039;s comments. There you will have the option to edit or delete them.',0,'1','','',0,0),(2,18993,'WooCommerce','','','','2015-08-16 21:08:41','2015-08-16 21:08:41','Payment to be made upon delivery. Order status changed from Pending Payment to Processing.',0,'1','WooCommerce','order_note',0,0),(3,18993,'WooCommerce','','','','2015-08-16 21:10:31','2015-08-16 21:10:31','Order status changed from Processing to Completed.',0,'1','WooCommerce','order_note',0,0);
 /*!40000 ALTER TABLE `wp_comments` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
